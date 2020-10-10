@@ -1,4 +1,9 @@
 <div>
+
+    <livewire:siswa-create></livewire:siswa-create>
+
+    <hr>
+
     <table class="table">
         <thead class="thead-dark">
             <tr>
