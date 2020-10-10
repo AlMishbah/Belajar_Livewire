@@ -2,11 +2,13 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+use App\Siswa;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Siswa::class, function (Faker $faker) {
     return [
-        //
+        'nama_siswa'    =>  $faker->name,
+        'email'         =>  $faker->safeEmail,
+        'alamat'        =>  $faker->address
     ];
 });
