@@ -17,5 +17,6 @@ class SiswaIndex extends Component
 
     public function SiswaStore($siswa)
     {
+        session()->flash('message', 'Data Siswa ' . $siswa['nama_siswa'] . ' telah berhasil ditambahkan');
     }
 }
