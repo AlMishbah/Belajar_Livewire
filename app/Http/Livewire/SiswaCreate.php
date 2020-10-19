@@ -17,6 +17,12 @@ class SiswaCreate extends Component
 
     public function store()
     {
+        $this->validate([
+            "nama_siswa"    =>  "required|min:4",
+            "email"         =>  "required|email",
+            "alamat"        =>  "required"
+        ]);
+
         $siswa =    Siswa::create([
             'nama_siswa'    =>  $this->nama_siswa,
             'email'         =>  $this->email,
