@@ -25,6 +25,14 @@ class SiswaIndex extends Component
         $this->emit('getSiswa', $siswa);
     }
 
+    public function destroy($id)
+    {
+        $siswaDelete    =   Siswa::find($id);
+        $siswaDelete->delete();
+        session()->flash('message', 'Data Siswa telah berhasil dihapus');
+
+    }
+
     public function SiswaStore($siswa)
     {
         session()->flash('message', 'Data Siswa ' . $siswa['nama_siswa'] . ' telah berhasil ditambahkan');

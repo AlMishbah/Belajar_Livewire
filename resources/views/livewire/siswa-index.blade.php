@@ -36,7 +36,7 @@
                 <td>{{$data->alamat}}</td>
                 <td>
                     <button wire:click="getSiswa({{ $data->id }})" class="btn btn-sm btn-info text-white">Edit</button>
-                    <button class="btn btn-sm btn-danger text-white">Delete</button>
+                    <button wire:click="destroy({{ $data->id }})" class="btn btn-sm btn-danger text-white">Delete</button>
                 </td>
             </tr>
             @endforeach
