@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Siswa;
 use Livewire\Component;
+use Illuminate\Support\Facades\Validator;
 
 class SiswaCreate extends Component
 {

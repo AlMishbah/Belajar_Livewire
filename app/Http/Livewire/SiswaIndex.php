@@ -7,12 +7,22 @@ use Livewire\Component;
 
 class SiswaIndex extends Component
 {
+    public $statusUpdate    =   false;
+
     protected   $listeners  =   ['SiswaStore'];
+
     public function render()
     {
         return view('livewire.siswa-index', [
             'siswa' =>  Siswa::latest()->get()
         ]);
+    }
+
+    public function getSiswa($id)
+    {
+        $this->statusUpdate =   true;
+        $siswa  =   Siswa::find($id);
+        $this->emit('getSiswa', $siswa);
     }
 
     public function SiswaStore($siswa)
