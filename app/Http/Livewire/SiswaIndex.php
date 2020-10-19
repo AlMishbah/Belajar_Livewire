@@ -9,7 +9,7 @@ class SiswaIndex extends Component
 {
     public $statusUpdate    =   false;
 
-    protected   $listeners  =   ['SiswaStore'];
+    protected   $listeners  =   ['SiswaStore', 'siswaUpdated'];
 
     public function render()
     {
@@ -28,5 +28,10 @@ class SiswaIndex extends Component
     public function SiswaStore($siswa)
     {
         session()->flash('message', 'Data Siswa ' . $siswa['nama_siswa'] . ' telah berhasil ditambahkan');
+    }
+
+    public function siswaUpdated($siswa)
+    {
+        session()->flash('message', 'Data Siswa ' . $siswa['nama_siswa'] . ' telah berhasil diupdate');
     }
 }
