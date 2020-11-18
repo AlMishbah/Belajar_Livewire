@@ -14,7 +14,7 @@
 
     <hr>
 
-    <table class="table">
+    <table class="table" id="table_id" >
         <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>
@@ -42,4 +42,5 @@
             @endforeach
         </tbody>
     </table>
+        {{ $siswa->links() }}
 </div>

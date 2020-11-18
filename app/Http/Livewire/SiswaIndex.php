@@ -14,7 +14,7 @@ class SiswaIndex extends Component
     public function render()
     {
         return view('livewire.siswa-index', [
-            'siswa' =>  Siswa::latest()->get()
+            'siswa' =>  Siswa::latest()->paginate(3)
         ]);
     }
 
